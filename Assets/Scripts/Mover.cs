@@ -11,10 +11,23 @@ public class Mover : MonoBehaviour
     void Start()
     {
         //transform.Translate(1, 0, 0);
+        PrintInstruction();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        MovePlayer();
+    }
+
+    void PrintInstruction()
+    {
+        Debug.Log("Welcome to the game!");
+        Debug.Log("Move using arrow keys or WASD keys");
+        Debug.Log("Don't bump into objects!");
+    }
+
+    void MovePlayer()
     {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float yValue = 0f;
