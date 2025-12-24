@@ -6,8 +6,11 @@ public class Scorer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        hits++;
-        Debug.Log("Hit count: " + hits);
+        if (collision.gameObject.tag != "Hit")
+        {
+            hits++;
+            Debug.Log("Hit count: " + hits);
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
