@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TriggerProjectile : MonoBehaviour
@@ -18,6 +19,7 @@ public class TriggerProjectile : MonoBehaviour
             projectile3.SetActive(true);
             projectile4.SetActive(true);
             projectile5.SetActive(true);
+            Destroy(gameObject);
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
